@@ -1,0 +1,14 @@
+{
+  "development": {
+    "storage": "./db/risk-register.sqlite3",
+    "dialect": "sqlite"
+  },
+  "test": {
+    "storage": "./db/risk-register.sqlite3",
+    "dialect": ":memory"
+  },
+  "production": {
+    "storage": "./db/risk-register.sqlite3",
+    "dialect": "sqlite"
+  }
+}
