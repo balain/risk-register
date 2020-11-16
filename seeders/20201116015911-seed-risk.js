@@ -11,7 +11,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('Risk', [
+    await queryInterface.bulkInsert('Risks', [
       {
       summary: 'Moderately high risk item',
       likelihood: 3,
@@ -49,6 +49,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    await queryInterface.bulkDelete('Risk', null, {})
+    await queryInterface.bulkDelete('Risks', null, {})
   }
 };

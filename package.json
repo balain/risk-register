@@ -7,8 +7,10 @@
   "main": "index.js",
   "private": false,
   "scripts": {
-    "start": "node ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init-db": "sequelize db:migrate",
+    "seed": "sequelize db:seed:all"
   },
   "homepage": "https://github.com/balain/risk-register#readme",
   "repository": {
