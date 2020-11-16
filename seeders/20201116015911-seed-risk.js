@@ -18,8 +18,8 @@ module.exports = {
       impact: 5,
       owner: 'Some user',
       team: 'A Team',
-      createdAt: new Date().toDateString(),
-      updatedAt: new Date().toDateString()
+      createdAt: new Date(),
+      updatedAt: new Date()
       },
       {
       summary: 'Low risk item',
