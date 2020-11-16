@@ -10,7 +10,7 @@
     "start": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1",
     "init-db": "sequelize db:migrate",
-    "seed": "sequelize db:seed:all"
+    "seed-db": "sequelize db:seed:all"
   },
   "homepage": "https://github.com/balain/risk-register#readme",
   "repository": {
@@ -25,6 +25,7 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "moment": "^2.29.1",
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11",
     "sequelize": "^6.3.5",

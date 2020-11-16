@@ -27,8 +27,8 @@ module.exports = {
       impact: 1,
       owner: 'Another user',
       team: 'A Team',
-      createdAt: new Date().toDateString(),
-      updatedAt: new Date().toDateString()
+      createdAt: new Date(),
+      updatedAt: new Date()
       },
       {
       summary: 'Moderate risk item',
@@ -36,8 +36,8 @@ module.exports = {
       impact: 3,
       owner: 'Third user',
       team: 'B Team',
-      createdAt: new Date().toDateString(),
-      updatedAt: new Date().toDateString()
+      createdAt: new Date(),
+      updatedAt: new Date()
       }
     ])
   },

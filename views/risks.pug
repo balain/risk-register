@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+  p Risks List
+
+  table(class='table')
+    tr
+      th="ID"
+      th="Summary"
+      th="Likelihood"
+      th="Impact"
+      th="Score"
+      th="Owner"
+      th="Team"
+      th="Created"
+      th="Updated"
+    each risk in risks
+      tr
+        td=risk.id
+        td=risk.summary
+        td=risk.likelihood
+        td=risk.impact
+        td=(risk.likelihood * risk.impact)
+        td=risk.owner
+        td=risk.team
+        td=risk.createdAt
+        td=risk.updatedAt
