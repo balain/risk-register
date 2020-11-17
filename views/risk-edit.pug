@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  h1= title
+  p Risk Edit Form
+
+  form(action="/risks/update", method="post")
+    div
+      span.label ID: #{risk.id}
+    div
+      span.label Summary:
+      span#summary
+        input(type="text", name="title", size=risk.summary.length + 4, value=risk.summary)
+    div
+      span.label Likelihood:
+      span#likelihood
+        input(type="number", min=1, max=5, size=3, name="title", value=risk.likelihood)
+    div
+      span.label Impact:
+      span#impact
+        input(type="number", min=1, max=5, size=3, name="title", value=risk.impact)
+    div
+      span.label Score:
+      span#score #{risk.likelihood * risk.impact}
+    div
+      span.label Owner:
+      span#owner
+        input(type="text", name="title", value=risk.owner)
+    div
+      span.label Team:
+      span#team
+        input(type="text", name="title", value=risk.team)
+    div
+      span.label Created:
+      span#createdAt
+        span #{risk.createdAt.getFullYear() + "-" + (risk.createdAt.getMonth()+1) + "-" + risk.createdAt.getDate()}
+    div
+      label#updatedAt(for=updatedAt) Updated:
+      span#updatedAt
+        span #{risk.updatedAt.getFullYear() + "-" + (risk.updatedAt.getMonth()+1) + "-" + risk.updatedAt.getDate()}
+        // (name=updatedAt, type="date", value=(risk.updatedAt.getFullYear() + "-" + (risk.updatedAt.getMonth()+1) + "-" + risk.updatedAt.getDate()))
+    div.actions
+        input(type="submit", value="Update")
+
+  div
+    span
+      a(href="/risks/view") All risks |
+      a(href="/risks/view/" + (risk.id)) View this risk |
+      a(href="/risks/view/" + (risk.id+1)) Next risk
+
+

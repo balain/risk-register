@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+.label {
+  font-weight: bold;
+  padding: 3px;
+}
+
+#id { font-weight: bold; }
+#summary { font-weight: normal; }
+

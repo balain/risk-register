@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  h1= title
+  p Risk Detail Form
+
+  div
+    span.label ID:
+    span#id.dataValue #{risk.id}
+  div
+    span.label Summary:
+    span#summary #{risk.summary}
+  div
+    span.label Likelihood:
+    span#likelihood #{risk.likelihood}
+  div
+    span.label Impact:
+    span#impact #{risk.impact}
+  div
+    span.label Score:
+    span#score #{risk.likelihood * risk.impact}
+  div
+    span.label Owner:
+    span#owner #{risk.owner}
+  div
+    span.label Team:
+    span#team #{risk.team}
+  div
+    span.label Created:
+    span#createdAt #{risk.createdAt}
+  div
+    span.label Updated:
+    span#updatedAt #{risk.updatedAt}
+
+  div
+    span
+      a(href="/risks/view") All risks |
+      a(href="/risks/edit/" + risk.id) Edit this risk |
+      a(href="/risks/view/" + (risk.id+1)) Next risk
+
+

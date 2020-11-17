@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  p Risks List
+  p Full risk list
 
   table(class='table')
     tr
@@ -17,7 +17,8 @@ block content
       th="Updated"
     each risk in risks
       tr
-        td=risk.id
+        td
+          a(href='/risks/view/' + risk.id) #{risk.id}
         td=risk.summary
         td=risk.likelihood
         td=risk.impact
