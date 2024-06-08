@@ -30,7 +30,8 @@
     "pug": "^3.0.3",
     "sequelize": "^6.37.3",
     "sequelize-cli": "^6.6.2",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "tar": "^7.2.0"
   },
   "devDependencies": {
     "ava": "^5.3.1"
